@@ -1,6 +1,15 @@
 
 'use strict';
 
+const SUPABASE_URL = 'https://sebeasemgrjjraqbgrog.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNlYmVhc2VtZ3JqanJhcWJncm9nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU2MTc3NjMsImV4cCI6MjExMTE5Mzc2M30.Ui5cu1cPnbfNPG2OMgoUPrhfAhtP4Xr9yej_aqZUDLg
+';
+
+const db = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
 // デザイン確認用
 // 現段階ではデータの永続的な保存は行わない
 

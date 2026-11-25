@@ -1,0 +1,187 @@
+
+/* 日記ページ専用CSS */
+
+.yesterday-page [hidden] {
+  display: none !important;
+}
+
+/* 共通ボタン */
+
+.yesterday-page button {
+  font: inherit;
+  font-style: italic;
+  color: #202f55;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.yesterday-page button:hover:not(:disabled) {
+  color: #000;
+  opacity: 0.8;
+}
+
+.yesterday-page button:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+
+.yesterday-page button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* 追従ヘッダー */
+
+.diary-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #a3b9e0;
+  border-bottom: 1px solid rgba(32, 47, 85, 0.3);
+}
+
+.diary-toolbar-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  padding: 0.7em 0;
+  font-size: 0.95em;
+}
+
+/* 月別アーカイブ */
+
+#archive {
+  padding: 0.8em 0 1.2em;
+  border-top: 1px solid rgba(32, 47, 85, 0.15);
+}
+
+.archive-year {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 12em;
+  margin: 0 auto 0.6em;
+  font-style: italic;
+}
+
+.archive-year button {
+  padding: 0.2em 0.7em;
+}
+
+.archive-months {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em;
+  max-width: 24em;
+  margin: auto;
+  text-align: center;
+}
+
+.archive-months button[aria-current="true"] {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+/* 月ごとの見出し */
+
+.diary-month {
+  padding-top: 3.5em;
+  scroll-margin-top: 4.5em;
+}
+
+.diary-month h2 {
+  text-align: center;
+  font-size: 1.6em;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.diary-year {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.85em;
+  color: rgba(32, 47, 85, 0.6);
+  margin: 0.2em 0 2.8em;
+}
+
+/* 日記の記録 */
+
+.diary-entry {
+  margin-bottom: 2.4em;
+}
+
+.diary-entry-head {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-size: 0.95em;
+  font-style: italic;
+}
+
+.diary-entry-head .line {
+  flex: 1;
+  height: 1px;
+  background: rgba(32, 47, 85, 0.25);
+}
+
+.diary-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.95em;
+  margin: 1em 0 0;
+}
+
+/* 記入・編集欄 */
+
+.diary-form {
+  padding: 1.2em 0;
+  border-bottom: 1px solid rgba(32, 47, 85, 0.25);
+  scroll-margin-top: 4.5em;
+}
+
+.diary-form textarea,
+.diary-form input {
+  font: inherit;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(32, 47, 85, 0.25);
+  border-radius: 4px;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+.diary-form textarea {
+  display: block;
+  width: 100%;
+  margin: 1em 0;
+  resize: vertical;
+  line-height: 1.9;
+}
+
+.diary-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+}
+
+.diary-note {
+  font-size: 0.8em;
+  color: rgba(32, 47, 85, 0.7);
+  margin-right: auto;
+}
+
+/* スマホ表示 */
+
+@media (max-width: 700px) {
+  body.yesterday-page {
+    padding: 2em 1.3em;
+    margin: 1em auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}

@@ -1,15 +1,7 @@
 
 
+
 'use strict';
-
-const $ = id => document.getElementById(id);
-
-const months = [
-  'January', 'February', 'March',
-  'April', 'May', 'June',
-  'July', 'August', 'September',
-  'October', 'November', 'December'
-];
 
 // デザイン確認用
 // 現段階ではデータの永続的な保存は行わない

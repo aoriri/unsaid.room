@@ -8,9 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="yesterday.css">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
-<script src="yesterday.js" defer></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="yesterday.js" defer></script>
 </head>
 
 <body class="yesterday-page">
@@ -22,14 +21,13 @@
     <!-- 追従ヘッダー -->
     <div class="diary-toolbar" id="toolbar">
       <div class="diary-toolbar-row">
-        <button id="archive-toggle" aria-expanded="false" aria-controls="archive">
+        <button id="archive-toggle" aria-expanded="false">
           <span id="current-month"></span>
-          <span aria-hidden="true">⌄</span>
+          <span>⌄</span>
         </button>
-        <button id="write-toggle" aria-expanded="false" aria-controls="composer">write</button>
+        <button id="write-toggle" hidden>write</button>
       </div>
 
-      <!-- 月別アーカイブ -->
       <div id="archive" hidden>
         <div class="archive-year">
           <button id="prev-year" aria-label="前年">‹</button>
@@ -53,15 +51,16 @@
         rows="7" required></textarea>
 
       <div class="diary-actions">
-        <span class="diary-note">preview — 再読み込みで消えます</span>
+        <span id="draft-status" class="diary-note"></span>
         <button type="submit">save</button>
       </div>
 
-      <p id="composer-message" role="status" class="diary-note"></p>
+      <p id="composer-message" class="diary-note" role="status"></p>
     </form>
 
     <!-- 日記一覧 -->
     <div id="entries"></div>
+    <p id="page-message" class="diary-note" role="status"></p>
 
     <noscript>
       日記の表示にはJavaScriptが必要です。
@@ -70,7 +69,35 @@
   </main>
 
   <hr>
-  <a href="index.html">はじまりへ</a>
+
+  <!-- ページ下部 -->
+  <div class="diary-footer">
+    <a href="index.html">はじまりへ</a>
+    <button id="login-toggle">login</button>
+  </div>
+
+  <!-- ログイン欄 -->
+  <form id="login-form" class="diary-form login-form" hidden>
+    <input id="login-email"
+      type="email"
+      placeholder="email"
+      aria-label="メールアドレス"
+      autocomplete="username"
+      required>
+
+    <input id="login-password"
+      type="password"
+      placeholder="password"
+      aria-label="パスワード"
+      autocomplete="current-password"
+      required>
+
+    <div class="diary-actions">
+      <button type="submit">enter →</button>
+    </div>
+
+    <p id="login-message" class="diary-note" role="status"></p>
+  </form>
 
 </body>
 </html>

@@ -185,3 +185,51 @@
     box-sizing: border-box;
   }
 }
+
+
+/* ページ下部 */
+
+.diary-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diary-footer button {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* ログイン欄 */
+
+.login-form {
+  max-width: 260px;
+  margin: 1.5em 0 0 auto;
+  border-bottom: none;
+}
+
+.login-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.8em;
+}
+
+.login-form input::placeholder {
+  color: rgba(32, 47, 85, 0.5);
+  font-style: italic;
+}
+
+#page-message {
+  text-align: center;
+  margin: 3em 0;
+}
+
+#draft-status {
+  font-style: italic;
+}
+
+.diary-form button:disabled {
+  opacity: 0.4;
+  cursor: wait;
+}
+

@@ -79,6 +79,7 @@ a:hover {
 }
 
 ul, ul li {
+  font-family: 'Zen Kaku Gothic New', serif;
   list-style: none;
   margin: 0;
   padding: 0;

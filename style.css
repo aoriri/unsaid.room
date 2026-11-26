@@ -35,6 +35,14 @@ h2 {
   text-align: left;
 }
 
+.novel-lead {
+  font-size: 1em;
+  font-style: italic;
+  color: rgba(32, 47, 85, 0.6);
+  margin-bottom: 2.5em;
+  line-height: 1.8;
+}
+
 .hero {
   aspect-ratio: 1 / 1;
   width: 85%;
@@ -332,13 +340,7 @@ hr {
   color: #202f55;
 }
 
-.novel-lead {
-  font-size: 13.5px;
-  font-style: italic;
-  color: rgba(32, 47, 85, 0.6);
-  margin-bottom: 2.5em;
-  line-height: 1.8;
-}
+
 
 
 .novel-body p {
